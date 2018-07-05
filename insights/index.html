@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2018 School Report Card | Insights</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<!-- Social meta tags -->
+	<meta name="description" content="See the top schools in the region here.">
+	<meta name="keywords" content="schools, education, Texas, Texas schools, Houston, Houston schools, Houston education, local education, Texas education, HISD, Children at Risk, education data, Fort Bend ISD, teachers, students, ACT, SAT, STAAR">
+	<meta name="author" content="Houston Chronicle">
+	<meta property="og:type" content="2018 School Report Card | HoustonChronicle.com">
+	<meta property="og:title" content="School Report Card insights: Explore the Houston region’s top schools">
+	<meta property="og:site_name" content="Houston Chronicle">
+	<meta property="og:url" content="http://projects.houstonchronicle.com/schoolreportcard/insights/">
+	<meta property="og:image" content="https://s.hdnux.com/photos/73/51/75/15638358/3/rawImage.jpg">
+	<meta property="og:description" content="Search Children at Risk rankings to see how your school performed this year.">
+	<!-- Twitter card meta info -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="School Report Card insights: Explore the Houston region’s top schools">
+	<meta name="twitter:site" content="@HoustonChron">
+	<meta name="twitter:creator" content="@HoustonChron" />
+	<meta name="twitter:url" content="http://projects.houstonchronicle.com/schoolreportcard/insights/">
+	<meta name="twitter:image" content="https://s.hdnux.com/photos/73/51/75/15638358/3/rawImage.jpg">
+	<meta name="twitter:description" content="See the top schools in the region here.">
+	<!-- Font Aerdomr icons-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<!-- Bootstrap core CSS -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--load font awesome-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<!--AngularJS-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<!--Custom styles-->
+	<link rel='stylesheet' href="../css/reportcard.css">
+	<link rel='shortcut icon' href='../images/favicon.ico' type='image/x-icon'/ >
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+	<!-- Begin Hearst analytics-->
+	<script type="text/javascript" src="//nexus.ensighten.com/hearst/news-3p/Bootstrap.js"></script>
+	<!-- End Hearst analytics-->
+</head>
+<body ng-app="myApp"> 
+	<!--Share modal-->
+	<div class="modal fade share-modal" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content"> 
+				<div class="modal-header"> <button type="button" class="close" data-dismiss="modal"><span>×</span></button> 
+					<h4 class="modal-title" id="myLargeModalLabel">SHARE</h4> 
+				</div> 
+				<div class="modal-body">
+					<p><a href=http://www.facebook.com/dialog/feed?app_id=653292111352579&amp;link=http%3A%2F%2Fprojects.houstonchronicle.com%2Fschoolreportcard%2Finsightsd&amp;description=See%20the%20top%20schools%20in%20the%20region%20here.%20&amp;picture=https%3A%2F%2Fs.hdnux.com%2Fphotos%2F73%2F51%2F75%2F15638358%2F3%2FrawImage.jpg&amp;name=School%20Report%20Card%3A%20insights target="_blank"><i class="fa fa-facebook"></i>Facebook</a></p>
+					<p><a class="twitter" href="https://twitter.com/intent/tweet?text=.@HoustonChron School Report Card: See the top schools in the region here. projects.houstonchronicle.com/schoolreportcard/insights" target="_blank"><i class="fa fa-twitter"></i>Twitter</a></p>
+					<p><a href="mailto:?subject=See the top schools in the region&body=Explore the Houston region’s top schools: projects.houstonchronicle.com/schoolreportcard/insights"><i class="fa fa-envelope"></i>Email</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Navbar -->
+	<nav class="navbar navbar-default navbar-static-top">
+	<div class="container-fluid">
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="http://www.houstonchronicle.com/"><img src="http://ww4.hdnux.com/photos/24/13/32/5289647/4/rawImage.png" class="img-responsive"/></a>
+	</div>
+	<div id="navbar" class="collapse navbar-collapse auto">
+	<ul class="nav navbar-nav">
+		<li><a href="https://www.houstonchronicle.com/local/education/schoolreportcard/">School Report Card</a></li>
+		<li><a href="http://projects.houstonchronicle.com/schoolreportcard/">Search the data</a></li>
+		<li><a href="/insights">Insights</a></li>
+		<li><a href="/schoolreportcard/data/2018combinedcampusdata.csv" target="_blank">Download the data</a></li>
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Stories<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				<li><a href="https://www.houstonchronicle.com/news/houston-texas/houston/article/School-Report-Card-Progress-has-Houston-students-12954033.php">Progress has students ‘proud’</a></li>
+				<li><a href="https://www.houstonchronicle.com/news/houston-texas/houston/article/A-handful-of-suburban-districts-score-all-passing-12951879.php">Suburban districts all pass</a></li>
+				<li><a href="https://www.houstonchronicle.com/news/houston-texas/houston/article/Houston-area-s-rural-schools-see-advantages-12951918.php">Rural districts have advantage</a></li>
+				<li><a href="https://www.houstonchronicle.com/news/houston-texas/houston/article/At-Houston-s-top-high-schools-a-college-degree-12951957.php">Degree part of package</a></li>
+				<li><a href="https://www.houstonchronicle.com/news/houston-texas/houston/article/Sugar-Land-charter-schools-rank-high-in-school-12961274.php">Charters rank high</a></li>
+				<li><a href="https://www.houstonchronicle.com/sports/outdoors/article/Sharpstown-International-prepares-Houston-12961255.php">Degree part of package</a></li>
+			</ul>
+        </li>
+		<li><a href="http://www.houstonchronicle.com/subscribenow" target="_blank">Subscribe</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right">
+		<li><a href="#" data-toggle="modal" data-target=".share-modal">Share <i class="fa fa-share"></i></a></li>
+	</ul>
+	</div><!--/.nav-collapse -->
+	</div>
+	</nav>
+<!--Intro text-->
+<div id="main">
+	<div class="container">
+		<div class="col-md-10 col-md-offset-1">
+			<!--Logo-->
+			<img class="img-responsive" src="../images/logo.jpg" />
+		</div>
+		<!--Controller-->
+		<div ng-controller="MyCtrl"> 
+			<!--Begin schools results-->
+			<div class="col-md-10 col-md-offset-1">
+				<p style="font-family: Sanchez bold; font-size: 28px; margin:1% auto;line-height:28px;">Explore how Houston-area schools performed</p>
+				<div style="font-family: Antenna; font-size: 15px; margin: 1% auto; Line-height:24px">The 2018 Children At Risk ranking show a continuing performance gap between wealthier and lower-income schools across the Houston area’s 87 districts. Use the tools below to filter by district, grade, district type and the percentage of economically disadvantaged students.</div>
+				<br>
+				<iframe width="100%" height="500" frameborder="0" src="https://chronpremium.carto.com/builder/613d3a84-3dd7-478f-a93d-b478f08cde4d/embed" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen="" oallowfullscreen="" msallowfullscreen=""></iframe>
+				<div style="font-family: Antenna; font-size: 15px; margin: 1% auto; Line-height:24px">
+				<p><em><strong>Source</strong>: <a href="http://childrenatrisk.org/" target="_blank">Children at Risk </a>| Created by data journalist <a href="https://www.houstonchronicle.com/author/rachael-gleason/" target="_blank">Rachael Gleason </a></em></p>
+				<h2>Top elementary schools</h2>
+				<table>
+					<tr>
+						<th>Rank</th>
+						<th>School</th>
+						<th>Address</th>
+						<th>District</th>
+						<th>Grade</th>
+					</tr>
+					<tr ng-repeat="school in schools | filter: {level: 'Elementary school'} | orderBy: 'rank'">
+						<td>{{school.rank}}</td>
+						<td>{{school.campus}}</td>
+						<td>{{school.address}}</td>
+						<td>{{school.district}}</td>
+						<td>{{school.grade}}</td>
+					</tr>
+		  		</table>
+		  		<h2>Top middle schools</h2>
+		  		<table>
+		  			<tr>
+						<th>Rank</th>
+						<th>School</th>
+						<th>Address</th>
+						<th>District</th>
+						<th>Grade</th>
+					</tr>
+					<tr ng-repeat="school in schools | filter: {level: 'Middle school'} | orderBy: 'rank'">
+						<td>{{school.rank}}</td>
+						<td>{{school.campus}}</td>
+						<td>{{school.address}}</td>
+						<td>{{school.district}}</td>
+						<td>{{school.grade}}</td>
+					</tr>
+		  		</table>
+		  		<h2>Top high schools</h2>
+		  		<table>
+		  			<tr>
+						<th>Rank</th>
+						<th>School</th>
+						<th>Address</th>
+						<th>District</th>
+						<th>Grade</th>
+					</tr>
+					<tr ng-repeat="school in schools | filter: {level: 'High school'} | orderBy: 'rank'">
+						<td>{{school.rank}}</td>
+						<td>{{school.campus}}</td>
+						<td>{{school.address}}</td>
+						<td>{{school.district}}</td>
+						<td>{{school.grade}}</td>
+					</tr>
+		  		</table>
+		  	</div><!--End schools results-->
+		</div>
+	</div>
+</div><!--End main section-->
+</body>
+<!--jQuery script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="js/insights.js"></script>
+<script src="js/topschools.js"></script>
+</html>
